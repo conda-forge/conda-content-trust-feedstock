@@ -1,4 +1,4 @@
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: conda-content-trust
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/conda/conda-content-trust/archive/refs/tags/{{ version }}.tar.gz
-  sha256: ded769f69a0491bd1e002ce949a332ae5a47a60ce733adb8a724802c8fdfe02b
+  sha256: 518907b0906cda2defd2f2b30b8aeea51e3ca8748ae879c9a1b1de4a4031af95
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
@@ -17,13 +17,13 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - hatchling >=1.12.2
     - hatch-vcs >=0.2.0
     - wheel
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - cryptography >=41
 
 test:
@@ -36,6 +36,7 @@ test:
   source_files:
     - tests
   requires:
+    - python {{ python_min }}
     - pip
   commands:
     - pip check
