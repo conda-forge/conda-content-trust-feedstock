@@ -36,6 +36,7 @@ test:
   source_files:
     - tests
   requires:
+    - python {{ python_min }}
     - pip
   commands:
     - pip check
