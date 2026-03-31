@@ -17,13 +17,13 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - pip
     - hatchling >=1.12.2
     - hatch-vcs >=0.2.0
     - wheel
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - cryptography >=41
 
 test:
