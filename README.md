@@ -152,6 +152,3 @@ Feedstock Maintainers
 * [@kenodegard](https://github.com/kenodegard/)
 * [@wolfv](https://github.com/wolfv/)
 
-
-<!-- dummy commit to enable rerendering -->
-
