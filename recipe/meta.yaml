@@ -1,4 +1,4 @@
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: conda-content-trust
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://github.com/conda/conda-content-trust/archive/refs/tags/{{ version }}.tar.gz
-  sha256: 29edab3cf40e63231ec52109ce1ae1036ba09450ff3923f24eb4d1c79c8a636c
+  sha256: 6d459ca40d3775220ad7a2886a7c367a0d966b47cc0b97f27fb6be0439e361c9
 
 build:
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
